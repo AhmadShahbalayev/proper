@@ -12,8 +12,6 @@ export default function Home() {
   const signerStatus = useSignerStatus();
   const { logout } = useLogout();
 
-  console.log(user);
-
   return (
     <main className="flex min-h-screen flex-col items-center p-24 gap-4 justify-center text-center">
       {signerStatus.isInitializing ? (
@@ -21,7 +19,7 @@ export default function Home() {
       ) : user ? (
         <div className="flex flex-col gap-2 p-2">
           <p className="text-xl font-bold">Success!</p>
-          You're logged in as {user.email ?? "anon"}.
+          <div>You are logged in as {user.email ?? "anon"}.</div>
           <button className="btn btn-primary mt-6" onClick={() => logout()}>
             Log out
           </button>
