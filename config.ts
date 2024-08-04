@@ -3,14 +3,13 @@ import {
   cookieStorage,
   createConfig,
 } from "@account-kit/react";
-import { sepolia } from "@account-kit/infra";
 import { QueryClient } from "@tanstack/react-query";
+import { sepolia } from "@account-kit/infra";
 
 const uiConfig: AlchemyAccountsUIConfig = {
   illustrationStyle: "outline",
   auth: {
-    sections: [[{ type: "email" as const }], [{ type: "passkey" as const }]],
-    addPasskeyOnSignup: false,
+    sections: [[{ type: "email" as const }]],
   },
 };
 
